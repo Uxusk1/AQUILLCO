@@ -1,200 +1,48 @@
 |AD| https://rb.gy/4qldvq Smash Bros. Ultimate Tiers.com |AD|!
+var vid = "3r_Z5AYJJd4",
+    audio_streams = {},
+    audio_tag = document.getElementById('youtube');
 
-<html lang="en">
-<head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app57.us.archive.org';v.server_ms=5301;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/_static/js/playback.bundle.js?v=BsQ6byDz" charset="utf-8"></script>
-<script type="text/javascript" src="/_static/js/wombat.js?v=cRqOKCOw" charset="utf-8"></script>
-<script type="text/javascript">
-  __wm.init("https://web.archive.org/web");
-  __wm.wombat("http://www.smashbros.com:80/","20080913122932","https://web.archive.org/","web","/_static/",
-	      "1221308972");
-</script>
-<link rel="stylesheet" type="text/css" href="/_static/css/banner-styles.css?v=NHuXCfBH" />
-<link rel="stylesheet" type="text/css" href="/_static/css/iconochive.css?v=qtvMKcIJ" />
-<!-- End Wayback Rewrite JS Include -->
+fetch("https://"+vid+"-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url=https%3A%2F%2Fwww.youtube.com%2Fget_video_info%3Fvideo_id%3D" + vid).then(response => {
+    if (response.ok) {
+        response.text().then(data => {
 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>www.smashbros.com - Select Language - Nintendo</title>
-<link rel="stylesheet" type="text/css" href="/web/20080913122932cs_/http://www.smashbros.com/select_lang.css">
-<script language="JavaScript" type="text/JavaScript" src="/web/20080913122932js_/http://www.smashbros.com/rollover.js"></script>
-</head>
+            var data = parse_str(data),
+                streams = (data.url_encoded_fmt_stream_map + ',' + data.adaptive_fmts).split(',');
 
-<body onload="MM_preloadImages('img_sl/lang_jp_ov.gif','img_sl/lang_en-us_ov.gif','img_sl/lang_en-uk_ov.gif','img_sl/lang_de_ov.gif','img_sl/lang_fr_ov.gif','img_sl/lang_es_ov.gif','img_sl/lang_it_ov.gif');" onresize="window.location.reload();"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
-<style type="text/css">
-body {
-  margin-top:0 !important;
-  padding-top:0 !important;
-  /*min-width:800px !important;*/
+            streams.forEach(function(s, n) {
+                var stream = parse_str(s),
+                    itag = stream.itag * 1,
+                    quality = false;
+                console.log(stream);
+                switch (itag) {
+                    case 139:
+                        quality = "48kbps";
+                        break;
+                    case 140:
+                        quality = "128kbps";
+                        break;
+                    case 141:
+                        quality = "256kbps";
+                        break;
+                }
+                if (quality) audio_streams[quality] = stream.url;
+            });
+
+            console.log(audio_streams);
+
+            audio_tag.src = audio_streams['128kbps'];
+            audio_tag.play();
+        })
+    }
+});
+
+function parse_str(str) {
+    return str.split('&').reduce(function(params, param) {
+        var paramSplit = param.split('=').map(function(value) {
+            return decodeURIComponent(value.replace('+', ' '));
+        });
+        params[paramSplit[0]] = paramSplit[1];
+        return params;
+    }, {});
 }
-</style>
-<script>__wm.rw(0);</script>
-<div id="wm-ipp-base" lang="en" style="display:none;direction:ltr;">
-<div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
-<div id="wm-ipp-inside">
-  <div style="position:relative;">
-    <div id="wm-logo" style="float:left;width:110px;padding-top:12px;">
-      <a href="/web/" title="Wayback Machine home page"><img src="/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="/_static/images/toolbar/wayback-toolbar-logo-100.png, /_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, /_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0" /></a>
-    </div>
-    <div class="r" style="float:right;">
-      <div id="wm-btns" style="text-align:right;height:25px;">
-                  <div id="wm-save-snapshot-success">success</div>
-          <div id="wm-save-snapshot-fail">fail</div>
-          <a id="wm-save-snapshot-open" href="#"
-	     title="Share via My Web Archive" >
-            <span class="iconochive-web"></span>
-          </a>
-          <a href="https://archive.org/account/login.php"
-             title="Sign In"
-             id="wm-sign-in"
-          >
-            <span class="iconochive-person"></span>
-          </a>
-          <span id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
-        	<a href="http://faq.web.archive.org/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
-	<a id="wm-tb-close" href="#close" onclick="__wm.h(event);return false;" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
-      </div>
-      <div id="wm-share">
-          <a href="/web/20080913122932/http://web.archive.org/screenshot/http://www.smashbros.com/"
-             id="wm-screenshot"
-             title="screenshot">
-            <span class="wm-icon-screen-shot"></span>
-          </a>
-	<a id="wm-share-facebook" href="#" data-url="https://web.archive.org/web/20080913122932/http://www.smashbros.com:80/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
-	<a id="wm-share-twitter" href="#" data-url="https://web.archive.org/web/20080913122932/http://www.smashbros.com:80/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
-      </div>
-    </div>
-    <table class="c" style="">
-      <tbody>
-	<tr>
-	  <td class="u" colspan="2">
-	    <form target="_top" method="get" action="/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.smashbros.com/" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20080913122932" /><input type="submit" value="Go" /></form>
-	  </td>
-	  <td class="n" rowspan="2" style="width:110px;">
-	    <table>
-	      <tbody>
-		<!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
-		<tr class="m">
-		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20080809184322/http://www.smashbros.com/" title="09 Aug 2008"><strong>Aug</strong></a></td>
-		  <td class="c" id="displayMonthEl" title="You are here: 12:29:32 Sep 13, 2008">SEP</td>
-		  <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20081013190453/http://www.smashbros.com:80/" title="13 Oct 2008"><strong>Oct</strong></a></td>
-		</tr>
-		<!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
-		<tr class="d">
-		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20080816194244/http://www.smashbros.com/" title="19:42:44 Aug 16, 2008"><img src="/_static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a></td>
-		  <td class="c" id="displayDayEl" style="width:34px;font-size:24px;white-space:nowrap;" title="You are here: 12:29:32 Sep 13, 2008">13</td>
-		  <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20080915134913/http://www.smashbros.com:80/" title="13:49:13 Sep 15, 2008"><img src="/_static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0" /></a></td>
-		</tr>
-		<!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
-		<tr class="y">
-		  <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20070826230019/http://www.smashbros.com:80/" title="26 Aug 2007"><strong>2007</strong></a></td>
-		  <td class="c" id="displayYearEl" title="You are here: 12:29:32 Sep 13, 2008">2008</td>
-		  <td class="f" nowrap="nowrap"><a href="https://web.archive.org/web/20090918222052/http://www.smashbros.com:80/" title="18 Sep 2009"><strong>2009</strong></a></td>
-		</tr>
-	      </tbody>
-	    </table>
-	  </td>
-	</tr>
-	<tr>
-	  <td class="s">
-	    	    <div id="wm-nav-captures">
-	      	      <a class="t" href="/web/20080913122932*/http://www.smashbros.com/" title="See a list of every capture for this URL">23,957 captures</a>
-	      <div class="r" title="Timespan for captures of this URL">08 Oct 1999 - 05 Oct 2020</div>
-	      </div>
-	  </td>
-	  <td class="k">
-	    <a href="" id="wm-graph-anchor">
-	      <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
-		<canvas id="wm-sparkline-canvas" width="625" height="27" border="0"></canvas>
-	      </div>
-	    </a>
-	  </td>
-	</tr>
-      </tbody>
-    </table>
-    <div style="position:absolute;bottom:0;right:2px;text-align:right;">
-      <a id="wm-expand" class="wm-btn wm-closed" href="#expand" onclick="__wm.ex(event);return false;"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span style="font-size:80%">About this capture</span></a>
-    </div>
-  </div>
-    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
-                    <div id="wm-capinfo-collected-by">
-    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center">COLLECTED BY</div>
-    <div style="padding:3px;position:relative" id="wm-collected-by-content">
-            <div style="display:inline-block;vertical-align:top;width:50%;">
-			<span class="c-logo" style="background-image:url(https://archive.org/services/img/alexacrawls);"></span>
-		Organization: <a style="color:#33f;" href="https://archive.org/details/alexacrawls" target="_new"><span class="wm-title">Alexa Crawls</span></a>
-		<div style="max-height:75px;overflow:hidden;position:relative;">
-	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
-	  Starting in 1996, <a href="http://www.alexa.com/">Alexa Internet</a> has been donating their crawl data to the Internet Archive.  Flowing in every day, these data are added to the <a href="http://web.archive.org/">Wayback Machine</a> after an embargo period.
-	</div>
-	      </div>
-      <div style="display:inline-block;vertical-align:top;width:49%;">
-			<span class="c-logo" style="background-image:url(https://archive.org/services/img/51_crawl)"></span>
-		<div>Collection: <a style="color:#33f;" href="https://archive.org/details/51_crawl" target="_new"><span class="wm-title">51_crawl</span></a></div>
-		<div style="max-height:75px;overflow:hidden;position:relative;">
-	  <div style="position:absolute;top:0;left:0;width:100%;height:75px;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,255) 100%);"></div>
-	  this data is currently not publicly accessible.
-	</div>
-	      </div>
-    </div>
-    </div>
-    <div id="wm-capinfo-timestamps">
-    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center" title="Timestamps for the elements of this page">TIMESTAMPS</div>
-    <div>
-      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
-      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="/_static/images/loading.gif" alt="loading" /></div>
-    </div>
-    </div>
-  </div></div></div></div><div id="donato" style="position:relative;width:100%;">
-  <div id="donato-base">
-    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;transpiled=0&amp;referer=https%3A//web.archive.org/web/20080913122932/http%3A//www.smashbros.com/"
-	    scrolling="no" frameborder="0" style="width:100%; height:100%">
-    </iframe>
-  </div>
-</div><script type="text/javascript">
-__wm.bt(625,27,25,2,"web","http://www.smashbros.com/","20080913122932",1996,"/_static/",["/_static/css/banner-styles.css?v=NHuXCfBH","/_static/css/iconochive.css?v=qtvMKcIJ"]);
-  __wm.rw(1);
-</script>
-<!-- END WAYBACK TOOLBAR INSERT -->
-
-<div id="spacer"></div>
-<script language="JavaScript" type="text/JavaScript" src="/web/20080913122932js_/http://www.smashbros.com/select_lang.js"></script>
-
-<div id="img_1">
-	<div class="logo_upr">
-		<div class="logo"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/nintendo.gif" width="68" height="19" alt="Nintendo" class="logo1"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/wii.gif" width="70" height="31" alt="Wii"></div>
-	</div>
-</div>
-
-<div id="mainArea">
-	<div id="imgs">
-		<div class="sitename"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/smashbros.gif" width="242" height="28" alt="WWW.SMASHBROS.COM - SELECT YOUR LANGUAGE"></div>
-		<div class="lang"><a href="jp/index.html" onmouseover="MM_swapImage('jp','','img_sl/lang_jp_ov.gif',1)" onmouseout="MM_swapImgRestore()"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/lang_jp.gif" width="54" height="53" alt="Japanese" border="0" name="jp"></a><a href="en_us/index.html" onmouseover="MM_swapImage('en-us','','img_sl/lang_en-us_ov.gif',1)" onmouseout="MM_swapImgRestore()"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/lang_en-us.gif" width="53" height="53" alt="English(USA)" border="0" name="en-us"></a><a href="en_uk/index.html" onmouseover="MM_swapImage('en-uk','','img_sl/lang_en-uk_ov.gif',1)" onmouseout="MM_swapImgRestore()"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/lang_en-uk.gif" width="56" height="53" alt="English(UK&amp;Ireland)" border="0" name="en-uk"></a><a href="de/index.html" onmouseover="MM_swapImage('de','','img_sl/lang_de_ov.gif',1)" onmouseout="MM_swapImgRestore()"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/lang_de.gif" width="52" height="53" alt="German" border="0" name="de"></a><a href="fr/index.html" onmouseover="MM_swapImage('fr','','img_sl/lang_fr_ov.gif',1)" onmouseout="MM_swapImgRestore()"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/lang_fr.gif" width="55" height="53" alt="French" border="0" name="fr"></a><a href="es/index.html" onmouseover="MM_swapImage('es','','img_sl/lang_es_ov.gif',1)" onmouseout="MM_swapImgRestore()"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/lang_es.gif" width="53" height="53" alt="Spanish" border="0" name="es"></a><a href="it/index.html" onmouseover="MM_swapImage('it','','img_sl/lang_it_ov.gif',1)" onmouseout="MM_swapImgRestore()"><img src="/web/20080913122932im_/http://www.smashbros.com/img_sl/lang_it.gif" width="54" height="53" alt="Italian" border="0" name="it"></a></div>
-	</div>
-</div>
-
-<div id="img_2">
-	<div class="logo_jp"></div>
-</div>
-
-</body>
-</html><!--
-     FILE ARCHIVED ON 12:29:32 Sep 13, 2008 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 18:16:05 Oct 09, 2020.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
--->
-<!--
-playback timings (ms):
-  exclusion.robots.policy: 0.298
-  PetaboxLoader3.resolve: 3064.657
-  CDXLines.iter: 71.756 (3)
-  PetaboxLoader3.datanode: 617.881 (4)
-  RedisCDXSource: 51.223
-  load_resource: 3321.8
-  LoadShardBlock: 794.896 (3)
-  esindex: 0.014
-  captures_list: 1902.972
-  exclusion.robots: 0.313
--->
