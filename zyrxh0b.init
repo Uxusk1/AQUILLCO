@@ -3,4 +3,4 @@ syn.request = http_request or request
 
 _G.Toggle_GUI = Enum.KeyCode.RightControl --Right Ctrl
 
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/Uxusk1/scripts/zyrexmain.loooahhh"),true))()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Uxusk1/scripts/main/zyrexmain.loooahhh"),true))()
