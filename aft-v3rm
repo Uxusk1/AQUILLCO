@@ -1,0 +1,580 @@
+-- By Kaldr
+-- Profile: https://v3rmillion.net/member.php?action=profile&uid=1110292
+
+-- Instances:
+
+local AFTV = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local bar = Instance.new("Frame")
+local main = Instance.new("Frame")
+local vv = Instance.new("TextLabel")
+local hotkey = Instance.new("TextLabel")
+local tt = Instance.new("TextLabel")
+local t2 = Instance.new("TextLabel")
+local t1 = Instance.new("TextLabel")
+local two = Instance.new("TextButton")
+local one = Instance.new("TextButton")
+local e2 = Instance.new("TextButton")
+local e1 = Instance.new("TextButton")
+local d2 = Instance.new("TextButton")
+local d1 = Instance.new("TextButton")
+local hotkeybutton2 = Instance.new("TextBox")
+local hotkeybutton = Instance.new("TextBox")
+local hotkey2 = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local open = Instance.new("TextButton")
+local vv1 = Instance.new("TextLabel")
+
+--Properties:
+
+AFTV.Name = "AFTV"
+AFTV.Parent = game:GetService("CoreGui")
+AFTV.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+frame.Name = "frame"
+frame.Parent = AFTV
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.BackgroundTransparency = 1.000
+frame.BorderSizePixel = 0
+frame.Position = UDim2.new(0.38233459, 0, 0.505086958, 0)
+frame.Size = UDim2.new(0, 342, 0, 138)
+
+bar.Name = "bar"
+bar.Parent = frame
+bar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+bar.BackgroundTransparency = 1.000
+bar.BorderColor3 = Color3.fromRGB(78, 43, 255)
+bar.Position = UDim2.new(-0.00237008929, 0, -0.00224637985, 0)
+bar.Size = UDim2.new(0, 342, 0, 16)
+
+main.Name = "main"
+main.Parent = bar
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.BackgroundTransparency = 0.300
+main.BorderColor3 = Color3.fromRGB(78, 43, 255)
+main.Position = UDim2.new(-0.00128060579, 0, -0.020608902, 0)
+main.Size = UDim2.new(0, 342, 0, 138)
+
+vv.Name = "vv"
+vv.Parent = main
+vv.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+vv.BackgroundTransparency = 1.000
+vv.Position = UDim2.new(-0.00346103148, 0, 0.0124988761, 0)
+vv.Size = UDim2.new(0, 171, 0, 16)
+vv.Font = Enum.Font.Fantasy
+vv.Text = "Anti-Tool"
+vv.TextColor3 = Color3.fromRGB(78, 43, 255)
+vv.TextSize = 16.000
+vv.TextStrokeColor3 = Color3.fromRGB(78, 43, 255)
+vv.TextStrokeTransparency = 99999.000
+vv.TextTransparency = 0.150
+
+hotkey.Name = "hotkey"
+hotkey.Parent = main
+hotkey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hotkey.BackgroundTransparency = 1.000
+hotkey.Position = UDim2.new(0.5760234, 0, 0.128440917, 0)
+hotkey.Size = UDim2.new(0, 91, 0, 34)
+hotkey.Font = Enum.Font.Fantasy
+hotkey.Text = "HOTKEY"
+hotkey.TextColor3 = Color3.fromRGB(78, 43, 255)
+hotkey.TextSize = 20.000
+hotkey.TextStrokeColor3 = Color3.fromRGB(252, 48, 48)
+hotkey.TextStrokeTransparency = 99999.000
+
+tt.Name = "tt"
+tt.Parent = main
+tt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tt.BackgroundTransparency = 1.000
+tt.Position = UDim2.new(-0.00346097886, 0, 0.172052473, 0)
+tt.Size = UDim2.new(0, 197, 0, 22)
+tt.Font = Enum.Font.Fantasy
+tt.Text = "A.F.T.V by Kaldr"
+tt.TextColor3 = Color3.fromRGB(78, 43, 255)
+tt.TextSize = 25.000
+tt.TextStrokeColor3 = Color3.fromRGB(252, 48, 48)
+tt.TextStrokeTransparency = 99999.000
+
+t2.Name = "t2"
+t2.Parent = main
+t2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+t2.BackgroundTransparency = 1.000
+t2.Position = UDim2.new(0.0124156568, 0, 0.476423621, 0)
+t2.Size = UDim2.new(0, 192, 0, 19)
+t2.Font = Enum.Font.Code
+t2.Text = "equip personal tools."
+t2.TextColor3 = Color3.fromRGB(78, 43, 255)
+t2.TextSize = 15.000
+t2.TextStrokeColor3 = Color3.fromRGB(252, 48, 48)
+t2.TextStrokeTransparency = 99999.000
+t2.TextWrapped = true
+
+t1.Name = "t1"
+t1.Parent = main
+t1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+t1.BackgroundTransparency = 1.000
+t1.Position = UDim2.new(0, 0, 0.33149609, 0)
+t1.Size = UDim2.new(0, 197, 0, 20)
+t1.Font = Enum.Font.Code
+t1.Text = "When enabled, do not"
+t1.TextColor3 = Color3.fromRGB(78, 43, 255)
+t1.TextSize = 15.000
+t1.TextStrokeColor3 = Color3.fromRGB(252, 48, 48)
+t1.TextStrokeTransparency = 99999.000
+t1.TextWrapped = true
+
+two.Name = "two"
+two.Parent = main
+two.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+two.BorderColor3 = Color3.fromRGB(252, 48, 48)
+two.BorderSizePixel = 0
+two.Position = UDim2.new(0.870999992, 0, 0.172000006, 0)
+two.Size = UDim2.new(0, 20, 0, 100)
+two.Visible = false
+two.Font = Enum.Font.SciFi
+two.Text = ">"
+two.TextColor3 = Color3.fromRGB(252, 48, 48)
+two.TextSize = 17.000
+
+one.Name = "one"
+one.Parent = main
+one.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+one.BorderSizePixel = 0
+one.Position = UDim2.new(0.870696843, 0, 0.172052413, 0)
+one.Size = UDim2.new(0, 20, 0, 100)
+one.Font = Enum.Font.SciFi
+one.Text = ">"
+one.TextColor3 = Color3.fromRGB(78, 43, 255)
+one.TextSize = 17.000
+
+e2.Name = "e2"
+e2.Parent = main
+e2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+e2.BorderSizePixel = 0
+e2.Position = UDim2.new(0.0329999998, 0, 0.671000004, 0)
+e2.Size = UDim2.new(0, 126, 0, 32)
+e2.Visible = false
+e2.Font = Enum.Font.SciFi
+e2.Text = "E N A B L E"
+e2.TextColor3 = Color3.fromRGB(252, 48, 48)
+e2.TextSize = 17.000
+
+e1.Name = "e1"
+e1.Parent = main
+e1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+e1.BorderSizePixel = 0
+e1.Position = UDim2.new(0.0327555351, 0, 0.671332777, 0)
+e1.Size = UDim2.new(0, 126, 0, 32)
+e1.Font = Enum.Font.SciFi
+e1.Text = "E N A B L E"
+e1.TextColor3 = Color3.fromRGB(78, 43, 255)
+e1.TextSize = 17.000
+
+d2.Name = "d2"
+d2.Parent = main
+d2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+d2.BorderSizePixel = 0
+d2.Position = UDim2.new(0.43599999, 0, 0.671000004, 0)
+d2.Size = UDim2.new(0, 126, 0, 32)
+d2.Visible = false
+d2.Font = Enum.Font.SciFi
+d2.Text = "D I S A B L E"
+d2.TextColor3 = Color3.fromRGB(252, 48, 48)
+d2.TextSize = 17.000
+
+d1.Name = "d1"
+d1.Parent = main
+d1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+d1.BorderSizePixel = 0
+d1.Position = UDim2.new(0.436022848, 0, 0.671332777, 0)
+d1.Size = UDim2.new(0, 126, 0, 32)
+d1.Font = Enum.Font.SciFi
+d1.Text = "D I S A B L E"
+d1.TextColor3 = Color3.fromRGB(78, 43, 255)
+d1.TextSize = 17.000
+
+hotkeybutton2.Name = "hotkeybutton2"
+hotkeybutton2.Parent = main
+hotkeybutton2.BackgroundColor3 = Color3.fromRGB(252, 48, 48)
+hotkeybutton2.BackgroundTransparency = 0.800
+hotkeybutton2.Position = UDim2.new(0.584795296, 0, 0.37267071, 0)
+hotkeybutton2.Size = UDim2.new(0, 85, 0, 33)
+hotkeybutton2.Visible = false
+hotkeybutton2.Font = Enum.Font.SourceSans
+hotkeybutton2.Text = ""
+hotkeybutton2.TextColor3 = Color3.fromRGB(252, 48, 48)
+hotkeybutton2.TextSize = 20.000
+
+hotkeybutton.Name = "hotkeybutton"
+hotkeybutton.Parent = main
+hotkeybutton.BackgroundColor3 = Color3.fromRGB(78, 43, 255)
+hotkeybutton.BackgroundTransparency = 0.800
+hotkeybutton.Position = UDim2.new(0.584999979, 0, 0.372999996, 0)
+hotkeybutton.Size = UDim2.new(0, 85, 0, 33)
+hotkeybutton.Font = Enum.Font.SourceSans
+hotkeybutton.Text = ""
+hotkeybutton.TextColor3 = Color3.fromRGB(252, 48, 48)
+hotkeybutton.TextSize = 20.000
+
+hotkey2.Name = "hotkey2"
+hotkey2.Parent = main
+hotkey2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hotkey2.BackgroundTransparency = 1.000
+hotkey2.Position = UDim2.new(0.5760234, 0, 0.128440917, 0)
+hotkey2.Size = UDim2.new(0, 91, 0, 34)
+hotkey2.Visible = false
+hotkey2.Font = Enum.Font.Fantasy
+hotkey2.Text = "HOTKEY"
+hotkey2.TextColor3 = Color3.fromRGB(252, 48, 48)
+hotkey2.TextSize = 20.000
+hotkey2.TextStrokeColor3 = Color3.fromRGB(252, 48, 48)
+hotkey2.TextStrokeTransparency = 99999.000
+
+close.Name = "close"
+close.Parent = bar
+close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+close.BackgroundTransparency = 0.500
+close.BorderColor3 = Color3.fromRGB(78, 43, 255)
+close.Position = UDim2.new(0.748448968, 0, 0.0124998093, 1)
+close.Size = UDim2.new(0, 85, 0, 15)
+close.Font = Enum.Font.SciFi
+close.Text = "C L O S E"
+close.TextColor3 = Color3.fromRGB(78, 43, 255)
+close.TextSize = 13.000
+
+open.Name = "open"
+open.Parent = bar
+open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+open.BackgroundTransparency = 0.500
+open.BorderColor3 = Color3.fromRGB(78, 43, 255)
+open.Position = UDim2.new(0.494303197, 0, 0.0124998093, 1)
+open.Size = UDim2.new(0, 86, 0, 15)
+open.Font = Enum.Font.SciFi
+open.Text = "O P E N"
+open.TextColor3 = Color3.fromRGB(78, 43, 255)
+open.TextSize = 13.000
+
+vv1.Name = "vv1"
+vv1.Parent = bar
+vv1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+vv1.BackgroundTransparency = 1.000
+vv1.Position = UDim2.new(-0.00346097886, 0, 0.0124988556, 0)
+vv1.Size = UDim2.new(0, 170, 0, 16)
+vv1.Visible = false
+vv1.Font = Enum.Font.Fantasy
+vv1.Text = "A   F   T   V"
+vv1.TextColor3 = Color3.fromRGB(252, 48, 48)
+vv1.TextSize = 16.000
+vv1.TextStrokeColor3 = Color3.fromRGB(252, 48, 48)
+vv1.TextStrokeTransparency = 99999.000
+vv1.TextTransparency = 0.150
+
+-- Scripts:
+
+local function XIVE_fake_script() -- frame.LocalScript 
+	local script = Instance.new('LocalScript', frame)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(XIVE_fake_script)()
+local function SAYRLLY_fake_script() -- two.2s 
+	local script = Instance.new('LocalScript', two)
+
+	function var()
+		script.Parent.Parent.t1.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.t2.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.tt.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.vv.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.vv.Text = "Anti-Tool"
+		script.Parent.Parent.Parent.close.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.Parent.open.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.Parent.BorderColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.Parent.open.BorderColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.Parent.close.BorderColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.BorderColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.t1.Text = "When enabled, do not"
+		script.Parent.Parent.t2.Text = "equip personal tools."
+		script.Parent.Visible = false
+		script.Parent.Parent["one"].Visible = true
+		script.Parent.Parent.d2.Visible = false
+		script.Parent.Parent.e2.Visible = false
+		script.Parent.Parent.d1.Visible = true
+		script.Parent.Parent.e1.Visible = true
+		script.Parent.Parent.hotkeybutton.Visible = true
+		script.Parent.Parent.hotkey.Visible = true
+		script.Parent.Parent.hotkey2.Visible = false
+		script.Parent.Parent.hotkeybutton2.Visible = false
+	end
+	script.Parent.MouseButton1Click:Connect(var)
+end
+coroutine.wrap(SAYRLLY_fake_script)()
+local function QULX_fake_script() -- one.1s 
+	local script = Instance.new('LocalScript', one)
+
+	function var()
+		script.Parent.Parent.t1.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.t2.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.tt.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.vv.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.vv.Text = "Anchor"
+		script.Parent.Parent.Parent.close.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.Parent.open.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.Parent.BorderColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.Parent.open.BorderColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.Parent.close.BorderColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.BorderColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.t1.Text = "If stomped or dragged,"
+		script.Parent.Parent.t2.Text = "anchor is cancelled."
+		script.Parent.Visible = false 
+		script.Parent.Parent.e1.Visible = false
+		script.Parent.Parent.e2.Visible = true
+		script.Parent.Parent.d1.Visible = false
+		script.Parent.Parent.d2.Visible = true
+		script.Parent.Parent["two"].Visible = true
+		script.Parent.Parent.hotkeybutton.Visible = false
+		script.Parent.Parent.hotkey.Visible = false
+		script.Parent.Parent.hotkey2.Visible = true
+		script.Parent.Parent.hotkeybutton2.Visible = true
+	end
+	script.Parent.MouseButton1Click:Connect(var)
+end
+coroutine.wrap(QULX_fake_script)()
+local function KUPKICM_fake_script() -- e2.e2s 
+	local script = Instance.new('LocalScript', e2)
+
+	function var()
+	script.Parent.TextColor3 = Color3.fromRGB(78, 43, 255)
+	script.Parent.Parent.d2.TextColor3 = Color3.fromRGB(252, 48, 48)
+	game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Anchored = true
+	end
+	
+	script.Parent.MouseButton1Click:Connect(var)
+end
+coroutine.wrap(KUPKICM_fake_script)()
+local function SLTIEIF_fake_script() -- e1.e1s 
+	local script = Instance.new('LocalScript', e1)
+
+	function var()
+	script.Parent.TextColor3 = Color3.fromRGB(252, 48, 48)
+	script.Parent.Parent.d1.TextColor3 = Color3.fromRGB(78, 43, 255)
+	_G.fc = true
+	spawn(function()
+	    while true do
+	        wait()
+	        if _G.fc then
+					for i,v in pairs(game:GetService("Players")["LocalPlayer"].Character:GetDescendants()) do
+					if v.Name == "RightGrip" and v:IsA("Weld") then
+					v.Parent = game:GetService("SoundService")
+					end
+					end
+					end
+	        end
+	    end)
+	end
+	
+	script.Parent.MouseButton1Click:Connect(var)
+end
+coroutine.wrap(SLTIEIF_fake_script)()
+local function RGKCMOB_fake_script() -- d2.d2s 
+	local script = Instance.new('LocalScript', d2)
+
+	function var()
+		script.Parent.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.e2.TextColor3 = Color3.fromRGB(252, 48, 48)
+		game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Anchored = false
+	end
+	
+	script.Parent.MouseButton1Click:Connect(var)
+end
+coroutine.wrap(RGKCMOB_fake_script)()
+local function ZVAJU_fake_script() -- d1.d1s 
+	local script = Instance.new('LocalScript', d1)
+
+	function var()
+		script.Parent.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.e1.TextColor3 = Color3.fromRGB(78, 43, 255)
+		_G.fc = false
+		local e = game:GetService("SoundService").RightGrip
+		e.Parent = game:GetService("Players")["LocalPlayer"].Character
+	end
+	
+	script.Parent.MouseButton1Click:Connect(var)
+end
+coroutine.wrap(ZVAJU_fake_script)()
+local function UCODYCB_fake_script() -- hotkeybutton2.LocalScript 
+	local script = Instance.new('LocalScript', hotkeybutton2)
+
+	local UserInputService = game:GetService("UserInputService")
+		local SoundS = game:GetService("SoundService")
+		local player = game:GetService("Players").LocalPlayer
+		local char = player.Character or player.CharacterAdded:Wait()
+		local pressed = false
+		
+		UserInputService.InputBegan:Connect(function(inputObject, gpe)
+			if script.Parent.Text == "" then return end
+		    local key = Enum.KeyCode[script.Parent.Text]
+		    if inputObject.KeyCode == key then
+		        if not pressed then
+					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = true
+					pressed = true
+		            else
+					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Anchored = false
+		            pressed = false
+		            end
+					end
+		       	end)
+		
+		UserInputService.InputEnded:Connect(function(input)
+			if script.Parent:IsFocused() and input.KeyCode ~= Enum.KeyCode.Unknown then
+			local msg = script.Parent
+			script.Parent.Text = input.KeyCode.Name
+		    if msg.Text == "" then return end
+		    local key = Enum.KeyCode[msg.Text]
+			end
+		end)
+		
+end
+coroutine.wrap(UCODYCB_fake_script)()
+local function ZQSEU_fake_script() -- hotkeybutton.LocalScript 
+	local script = Instance.new('LocalScript', hotkeybutton)
+
+	local UserInputService = game:GetService("UserInputService")
+		local SoundS = game:GetService("SoundService")
+		local player = game:GetService("Players").LocalPlayer
+		local char = player.Character or player.CharacterAdded:Wait()
+		local pressed = false
+		
+		UserInputService.InputBegan:Connect(function(inputObject, gpe)
+			if script.Parent.Text == "" then return end
+		    local key = Enum.KeyCode[script.Parent.Text]
+		    if inputObject.KeyCode == key then
+		        if not pressed then
+		            _G.fc = true
+					spawn(function()
+					    while true do
+					        wait()
+					        if _G.fc then
+									for i,v in pairs(game:GetService("Players")["LocalPlayer"].Character:GetDescendants()) do
+									if v.Name == "RightGrip" and v:IsA("Weld") then
+									v.Parent = game:GetService("SoundService")
+									end
+					end
+					end
+	        end
+	    end)
+		            pressed = true
+		        else
+			_G.fc = false
+		            for i,v in pairs(SoundS:GetChildren()) do
+		                v.Parent = char
+		            end
+		            pressed = false
+		        end
+		    end
+		end)
+		
+		UserInputService.InputEnded:Connect(function(input)
+			if script.Parent:IsFocused() and input.KeyCode ~= Enum.KeyCode.Unknown then
+			local msg = script.Parent
+			script.Parent.Text = input.KeyCode.Name
+		    if msg.Text == "" then return end
+		    local key = Enum.KeyCode[msg.Text]
+			end
+		end)
+end
+coroutine.wrap(ZQSEU_fake_script)()
+local function QHHM_fake_script() -- close.cs 
+	local script = Instance.new('LocalScript', close)
+
+	function v()
+		script.Parent.Parent.BackgroundTransparency = 0
+		script.Parent.Parent.main.Visible = false
+		script.Parent.Parent.vv1.Visible = true
+		if script.Parent.Parent.main.t1.Text == "When enabled, do not" then
+			script.Parent.Parent.vv1.TextColor3 = Color3.fromRGB(78, 43, 255) else
+			script.Parent.Parent.vv1.TextColor3 = Color3.fromRGB(252, 48, 48)
+		end
+	end
+	script.Parent.MouseButton1Click:Connect(v)
+end
+coroutine.wrap(QHHM_fake_script)()
+local function ODBVXN_fake_script() -- open.os 
+	local script = Instance.new('LocalScript', open)
+
+	function var()
+		script.Parent.Parent.BackgroundTransparency = 1
+		script.Parent.Parent.main.Visible = true
+		script.Parent.Parent.vv1.Visible = false
+		if script.Parent.Parent.main.t1.Text == "When enabled, do not" then
+		script.Parent.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.main.e1.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.main.d1.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.main.t1.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.main.t2.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.main.tt.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.main.vv.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.close.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.open.TextColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.Parent.BorderColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.open.BorderColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.close.BorderColor3 = Color3.fromRGB(78, 43, 255)
+		script.Parent.Parent.BorderColor3 = Color3.fromRGB(78, 43, 255)
+		else
+		script.Parent.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.main.e1.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.main.d1.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.main.t1.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.main.t2.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.main.tt.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.main.vv.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.close.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.open.TextColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.Parent.BorderColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.open.BorderColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.close.BorderColor3 = Color3.fromRGB(252, 48, 48)
+		script.Parent.Parent.BorderColor3 = Color3.fromRGB(252, 48, 48)
+		end 
+		
+	end
+	script.Parent.MouseButton1Click:Connect(var)
+	
+end
+coroutine.wrap(ODBVXN_fake_script)()
